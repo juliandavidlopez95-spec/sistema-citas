@@ -10,7 +10,7 @@ public class CitaDAO {
 
 // Método para programar una nueva cita
     public boolean programarCita(Cita cita) {
-        String sql = "INSERT INTO cita (idPaciente, id_Horario, id_Estado_Cita, id_Tipo_Cita, id_Fecha_Creacion) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO cita (idPaciente, id_Horario, id_Estado_Cita, id_Tipo_Cita, id_Fecha_Creacion) VALUES (?, ?, ?, ?, ?)";
 // Creamos un string para la consulta SQL que insertará una nueva cita en la base de datos. Utilizamos parámetros (?) para evitar inyecciones SQL y facilitar la inserción de datos.
         try (Connection conn = ConexionDB.conectar();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
