@@ -21,6 +21,7 @@ public class CitaDAO {
             pstmt.setInt(3, cita.getIdEstadoCita());
             pstmt.setInt(4, cita.getIdTipoCita());
             pstmt.setDate(5, cita.getIdFechaCreacion());
+            
 
             int filas = pstmt.executeUpdate();
 
